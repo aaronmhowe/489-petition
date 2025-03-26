@@ -88,3 +88,32 @@ body {
   cursor: pointer;
   font-size: 16px;
 }
+
+.signaturelist {
+  margin-top: 30px;
+}
+
+.signaturelist h2 {
+  color: #c41e3a;
+  text-align: center;
+}
+
+table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  text-indent: 0;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #b1b1b1;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
