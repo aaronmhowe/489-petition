@@ -9,6 +9,8 @@ body {
   background-color: #333;
   padding: 20px 0;
   text-align: center;
+  display: block;
+  justify-content: unset;
 }
 
 .navbar a {
@@ -16,6 +18,7 @@ body {
   text-decoration: none;
   margin: 0 15px;
   font-family:Arial, Helvetica, sans-serif;
+  display: inline;
 }
 
 .container {
