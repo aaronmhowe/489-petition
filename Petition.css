@@ -15,11 +15,12 @@ body {
   color: white;
   text-decoration: none;
   margin: 0 15px;
+  font-family:Arial, Helvetica, sans-serif
 }
 
 .container {
   width: 80%;
-  max-width: 900px;
+  max-width: 725px;
   margin: 20px auto;
   background-color: white;
   border-radius: 5px;
@@ -30,7 +31,7 @@ body {
 .header {
   text-align: center;
   color: #2a4b8d;
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 20px;
 }
 
@@ -40,13 +41,18 @@ body {
 }
 
 .text {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 15px;
   flex: 3;
-  padding-right: 20px;
+  padding-right: 25px;
+  line-height: 25px;
+  margin-top: -20px;
+  text-align: justify;
 }
 
 .image {
   flex: 1;
-  text-align: center;
+  text-align: right;
 }
 
 .image img {
