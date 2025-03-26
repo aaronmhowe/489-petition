@@ -17,7 +17,7 @@ const db = new sqlite3.Database(path.join(__dirname, '../database/petition.db'),
     }
 });
 
-const Participant = {
+const Participants = {
     getAll: () => {
         return new Promise((resolve, reject) => {
             db.all('SELECT * FROM Participants', [], (err, rows) => {
@@ -31,15 +31,26 @@ const Participant = {
     },
     add: (Participant) => {
         return new Promise((resolve, reject) => {
-            resolve({
-                ID: 1,
-                Name: Participant.Name,
-                Email: Participant.Email,
-                City: Participant.City,
-                State: Participant.State
-            });
+            const { Name, Email, City, State } = Participant;
+            db.run(
+                'INSERT INTO Participants (Name, Email, City, State) VALUES (?, ?, ?, ?)',
+                [Name, Email, City, State],
+                function(err) {
+                    if (err) {
+                        reject(err);
+                    } else {
+                        db.get('SELECT * FROM Participants WHERE id = ?', [this.lastID], (err, row) => {
+                            if (err) {
+                                reject(err);
+                            } else {
+                                resolve(row);
+                            }
+                        });
+                    }
+                }
+            );
         });
     }
 };
 
-module.exports = Participant;
+module.exports = Participants;
