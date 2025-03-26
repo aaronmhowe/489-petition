@@ -7,20 +7,20 @@ body {
 
 .navbar {
   background-color: #333;
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 .container {
-  width: 75%;
-  max-width: 1000px;
-  margin: 15px auto;
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
