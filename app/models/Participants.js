@@ -7,11 +7,11 @@ const db = new sqlite3.Database(path.join(__dirname, '../database/petition.db'),
         console.log('Database Connection Success.');
         db.run(`
             CREATE TABLE IF NOT EXISTS Participants (
-            ID INTEGER PRIMARY KEY,
-            Name VARCHAR(255) NOT NULL,
-            Email VARCHAR(255) NOT NULL UNIQUE,
-            City VARCHAR(255) NOT NULL,
-            State VARCHAR(255) NOT NULL,
+                ID INTEGER PRIMARY KEY,
+                Name VARCHAR(255) NOT NULL,
+                Email VARCHAR(255) NOT NULL UNIQUE,
+                City VARCHAR(255) NOT NULL,
+                State VARCHAR(255) NOT NULL
             )
         `);
     }
@@ -28,5 +28,18 @@ const Participant = {
                 }
             });
         });
+    },
+    add: (Participant) => {
+        return new Promise((resolve, reject) => {
+            resolve({
+                ID: 1,
+                Name: Participant.Name,
+                Email: Participant.Email,
+                City: Participant.City,
+                State: Participant.State
+            });
+        });
     }
-}
+};
+
+module.exports = Participant;
