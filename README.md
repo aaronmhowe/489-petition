@@ -21,7 +21,7 @@
             - `sudo apt update && upgrade`
             - `sudo apt install python3`
         2. Verify installation by entering `python --version` or `python3 --version`
-2. Run a Python's Built-in Local Web Server
+2. Run Python's Built-in Local Web Server
     1. Python provides built-in web server hosting, typically started by entering in your terminal `python -m http.server`, but, by default the script will search for `index.html`, and since we are using a custom name for our HTML file, what results is the bare-bones web-page that shows the project directory listing.
     2. I've added a script to the root of the project: `server.py`. We will run this script instead of `python -m http.server`.
     3. In your terminal, enter the command `python server.py` and follow the localhost URL `http://localhost:8000` as it appears.
