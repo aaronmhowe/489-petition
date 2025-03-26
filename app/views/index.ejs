@@ -68,15 +68,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <% if (typeof submissions !== 'undefined' && submissions & submissions.length > 0) { %>
-                           <% submissions.forEach(function(submission) { %>
+                        <% if (submissions && submissions.length > 0) { %>
+                            <% submissions.forEach(function(submission) { %>
                                 <tr>
                                   <td><%= submission.Name %></td>
                                   <td><%= submission.City %></td>
                                   <td><%= submission.State %></td>
                                 </tr>
                             <% }); %>
-                       <% } %>
                           <!-- <tr>
                              <td>Alice Johnson</td>
                              <td>Seattle</td>
@@ -87,7 +86,7 @@
                              <td>Portland</td>
                              <td>OR</td>
                           </tr> -->
-                       <!-- <% } %>   -->
+                        <% } %>
                     </tbody>
                 </table>
             </div>
