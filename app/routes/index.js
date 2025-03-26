@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const Participants = require('../models/Participants');
-const { name } = require('ejs');
 
 /* GET home page. */
-router.get('/', async function(req, res, next) {
+router.get('/', async function(req, res) {
   try {
     const submissions = await Participants.getAll();
     res.render('index', {
@@ -24,7 +23,7 @@ router.get('/', async function(req, res, next) {
   }
 });
 
-router.post('/sign', async function(req, res, next) {
+router.post('/sign', async function(req, res) {
   try {
     const { Name, Email, City, State } = req.body;
     if (!Name || Name.length < 5 || Name.length > 20) {
