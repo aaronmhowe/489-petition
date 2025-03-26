@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Petition</title>
+        <title><%= title %></title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="Petition.css">
     </head>
@@ -35,7 +35,10 @@
                     <img src="/images/midterm_image_asset.jpg">
                 </div>
             </div>
+
             <div id="alert"></div>
+            <%- include('./alert') %>
+
             <div class="petitionform">
                 <h2>Sign the Petition</h2>
                 <form id="petition">
@@ -65,16 +68,26 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Alice Johnson</td>
-                            <td>Seattle</td>
-                            <td>WA</td>
-                        </tr>
-                        <tr>
-                            <td>Bob Smith</td>
-                            <td>Portland</td>
-                            <td>OR</td>
-                        </tr>
+                        <% if (typeof submissions !== 'undefined' && submissions & submissions.length > 0) { %>
+                           <% submissions.forEach(function(submission) { %>
+                                <tr>
+                                  <td><%= submission.Name %></td>
+                                  <td><%= submission.City %></td>
+                                  <td><%= submission.State %></td>
+                                </tr>
+                            <% }); %>
+                       <% } else { %>
+                          <tr>
+                             <td>Alice Johnson</td>
+                             <td>Seattle</td>
+                             <td>WA</td>
+                          </tr>
+                          <tr>
+                             <td>Bob Smith</td>
+                             <td>Portland</td>
+                             <td>OR</td>
+                          </tr>
+                       <% } %>  
                     </tbody>
                 </table>
             </div>

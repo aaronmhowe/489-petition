@@ -24,7 +24,7 @@ const Participants = {
                 if (err) {
                     reject(err);
                 } else {
-                    resolve(err);
+                    resolve(rows);
                 }
             });
         });

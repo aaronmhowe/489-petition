@@ -27,7 +27,7 @@ router.get('/', async function(req, res, next) {
 router.post('/sign', async function(req, res, next) {
   try {
     const { Name, Email, City, State } = req.body;
-    if (!Name || Name.length < 5 || name.length > 20) {
+    if (!Name || Name.length < 5 || Name.length > 20) {
       return res.status(400).json({
         success: false,
         message: 'Name should be within 5 to 20 characters in length!'

@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 Name: document.getElementById('Name').value,
                 Email: document.getElementById('Email').value,
                 City: document.getElementById('City').value,
-                State: document.getElementById('State').value,
+                State: document.getElementById('State').value
             };
             fetch('/sign', {
                 method: 'POST',
@@ -71,17 +71,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                     tbody.insertBefore(addRow, tbody.firstChild);
                     petitionInput.reset();
-                    sendAlert(data.message, 'Form Submission Successful.');
+                    sendAlert(data.message, 'Form Submission Successful.', 'success');
                 } else {
-                    sendAlert(data.message, 'Form Submission Failed.')
+                    sendAlert(data.message, 'Form Submission Failed.', 'danger');
                 }
             })
             .catch(error => {
                 console.error('Failure: ', error);
-                sendAlert('Form Submission Failed.');
+                sendAlert('Form Submission Failed.', 'danger');
             });
         } else {
-            sendAlert(submissionForm.uiAlert.join('<br>'), 'Failed');
+            sendAlert(submissionForm.uiAlert.join('<br>'), 'danger');
         }
     });
 });
