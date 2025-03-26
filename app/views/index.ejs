@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><%= title %></title>
+        <title>Petition</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="stylesheets/Petition.css">
     </head>
@@ -76,8 +76,8 @@
                                   <td><%= submission.State %></td>
                                 </tr>
                             <% }); %>
-                       <% } else { %>
-                          <tr>
+                       <% } %>
+                          <!-- <tr>
                              <td>Alice Johnson</td>
                              <td>Seattle</td>
                              <td>WA</td>
@@ -86,13 +86,13 @@
                              <td>Bob Smith</td>
                              <td>Portland</td>
                              <td>OR</td>
-                          </tr>
-                       <% } %>  
+                          </tr> -->
+                       <!-- <% } %>   -->
                     </tbody>
                 </table>
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-        <script src="Petition.js"></script>
+        <script src="/javascripts/Petition.js"></script>
     </body>
 </html>
