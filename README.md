@@ -14,15 +14,18 @@ Pre-Requisites (Windows)
         3. Under "User variables for \[user\]", double-click "Path".
         4. Click "New" and type out `C:\sqlite` or replace `\sqlite` with whatever you named the folder where you extracted the files.
         5. Click "Ok" and exit.
+
 Pre-Requisites (Linux)
 1. Install Node with `sudo apt install nodejs npm`.
     - Before ever installing anything on Linux, run `sudo apt update`, followed by `sudo apt upgrade`.
 2. Install SQLite with `sudo apt install sqlite3`.
+
 Pre-Requisites (MacOS)
 1. Install NodeJS
     1. Install Homebrew with `/bin/bash -C "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
     2. Install Node with `brew install node`.
 2. Install SQLite with `brew install sqlite3`
+
 Set-up and Execution (Windows Users)
 1. Open a Terminal Application
     1. In Windows Search, search for either Command Prompt, Powershell, or Git Bash.
@@ -38,6 +41,7 @@ Set-up and Execution (Windows Users)
     1. I've added a batch script `start.bat` at the root of the project directory `\petition`.
     2. The application can be launched by entering `start.bat` in your terminal.
         - Dependencies for NodeJS and ExpressJS should be installed automatically by executing this script, but in the event the script doesn't work, see the alternate instructions section below.
+
 Set-up and Execution (Linux/MacOS Users)
 1. From Terminal, Clone the Application
     1. Change your working directory into whichever folder you prefer.
@@ -54,6 +58,7 @@ Set-up and Execution (Linux/MacOS Users)
         - Dependencies for NodeJS and ExpressJS should be installed automatically by executing this script, but in the event the script doesn't work, see the alternate instructions section below.
 ## Alternate Instructions for Set-up and Running (if the execution scripts fail)
 - It is essential to complete the pre-requisite sections if you have not already done so.
+
 Windows Users
 1. Clone the Application
     - See main Set-up and Execution section.
@@ -64,6 +69,7 @@ Windows Users
 3. Execute the Application with Nodemon
     1. Execute `npx nodemon ./bin/www`.
         - Note: This command will not work unless `\app` is your working directory (`cd app` from `\petition`).
+        
 Linux/MacOS Users
 1. Clone the Application
     - See main Set-up and Execution section.
