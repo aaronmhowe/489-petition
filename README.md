@@ -6,7 +6,7 @@ Pre-Requisites (Windows)
     1. Install FNM Node Package Manager with `winget install Schniz.fnm`.
     2. Install Node with `fnm install 22`.
 2. Install SQLite
-    1. Download precompiled binaries (here)[https://www.sqlite.org/download.html].
+    1. Download precompiled binaries [here](https://www.sqlite.org/download.html).
     2. Extract the downloaded files to their own folder.
     3. Add the folder to your PATH environment variables.
         1. Windows Search -> "Environment Variables"
@@ -69,7 +69,7 @@ Windows Users
 3. Execute the Application with Nodemon
     1. Execute `npx nodemon ./bin/www`.
         - Note: This command will not work unless `\app` is your working directory (`cd app` from `\petition`).
-        
+
 Linux/MacOS Users
 1. Clone the Application
     - See main Set-up and Execution section.
