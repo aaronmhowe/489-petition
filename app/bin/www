@@ -87,4 +87,13 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+
+  // print URL in terminal
+  const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
+  const host = 'localhost';
+  console.log("");
+  console.log("---------------------")
+  console.log('\x1b[32m%s\x1b[0m', `Application URL:`);
+  console.log('\x1b[36m%s\x1b[0m', `${protocol}://${host}:${addr.port}`);
+  console.log("---------------------")
 }
