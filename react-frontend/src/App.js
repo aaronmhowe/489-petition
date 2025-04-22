@@ -68,7 +68,7 @@ function App() {
         });
         return false;
       }
-    } catch {
+    } catch (e) {
       console.error('Failed to submit signature:', e);
       setAlert({
         show: true,
@@ -103,7 +103,7 @@ function App() {
             </p>
           </div>
           <div className="image">
-            <img src="/public/images/midterm_image_asset.jpg" alt="Professor" />
+            <img src="/images/midterm_image_asset.jpg" alt="Professor" />
           </div>
         </div>
         {alert.show && <Alert message={alert.message} type={alert.type} onClose={() => setAlert({...alert, show: false })} />}
