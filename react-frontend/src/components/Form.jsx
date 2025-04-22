@@ -31,7 +31,7 @@ function Form({ onAddSignature }) {
    */
   const onSubmit = async (e) => {
     e.preventDefault();
-    if (formData.Name.Length < 5 || formData.Name.Length > 20) {
+    if (formData.Name.length < 5 || formData.Name.length > 20) {
       alert('Name must be at least 5 characters or at most 20 characters in length!');
       return;
     }

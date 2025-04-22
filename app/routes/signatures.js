@@ -21,11 +21,11 @@ router.get('/', async (req, res) => {
 });
 
 /**
- * Insert form signatures.
+ * Post form signatures.
  * @param {*} req - HTTP Request.
  * @param {*} res - HTTP Response.
  */
-router.insert('/', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { Name, Email, City, State } = req.body;
     if (!Name || Name.length < 5 || Name.length > 20) {
@@ -42,7 +42,7 @@ router.insert('/', async (req, res) => {
     }
     if (!State || State.length !== 2 || State !== State.toUpperCase()) {
       return res.status(400).json({
-        sucess: false,
+        success: false,
         message: 'State must only be its two letter abbreviation and uppercase!'
       });
     }

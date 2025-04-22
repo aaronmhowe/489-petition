@@ -23,7 +23,7 @@ function App() {
    */
   const getSignatures = async () => {
     try {
-      const response = await fetch('http://localhost:4000/signatures');
+      const response = await fetch('/signatures');
       const data = await response.json();
       setSignatures(data);
     } catch (e) {
@@ -44,7 +44,7 @@ function App() {
    */
   const addSignature = async (formSignature) => {
     try {
-      const response = await fetch('http://localhost:4000/signatures', {
+      const response = await fetch('/signatures', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
