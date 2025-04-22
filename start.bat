@@ -1,11 +1,4 @@
 @echo off
 
-cd app || exit /b 1
-
-if not exist "node_modules\" (
-    echo Installing Node Dependencies
-    call npm install
-)
-
-echo Starting Application
-call npx nodemon ./bin/www
+start cmd /k "cd app && npm start"
+start cmd /k "cd react-frontend && npm start"

@@ -1,16 +1,11 @@
 #!/bin/bash
 
-cd app || { exit 1; }
+cd app
+npm start &
+BACKEND_PID=$!
 
-if [ ! -d "node_modules" ]; then
-    echo "Installing Node Dependencies"
-    npm install
-fi
+cd ../react-frontend
+npm start &
+FRONTEND_PID=$!
 
-if ! command -v npx &> /dev/null; then
-    echo "Installing Nodemon"
-    npm install -D nodemon
-fi
-
-echo "Starting Application"
-npx nodemon ./bin/www
+wait $BACKEND_PID $FRONTEND_PID
