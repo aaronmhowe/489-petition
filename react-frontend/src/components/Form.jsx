@@ -55,7 +55,7 @@ function Form({ onAddSignature }) {
   };
 
   return (
-    <div className="form">
+    <div className="petitionform">
       <h2>Sign the Petition</h2>
       <form id="petition" onSubmit={onSubmit}>
         <div className="participant">

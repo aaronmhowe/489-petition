@@ -7,7 +7,7 @@ import React from 'react';
  */
 function Signatures({ signatures }) {
   return (
-    <div className="signatures">
+    <div className="signaturelist">
       <h2>Signatures</h2>
       <table>
         <thead>
