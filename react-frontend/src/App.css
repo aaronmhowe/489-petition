@@ -1,38 +1,128 @@
-.App {
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 20px 0;
+  text-align: center;
+  display: block;
+  justify-content: unset;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-family:Arial, Helvetica, sans-serif;
+  display: inline;
+}
+
+.container {
+  width: 80%;
+  max-width: 725px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  color: #2a4b8d;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.text {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  flex: 3;
+  padding-right: 25px;
+  line-height: 25px;
+  margin-top: -10px;
+  text-align: justify;
+}
+
+.image {
+  flex: 1;
+  text-align: right;
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.petitionform h2 {
+  color: #c41e3a;
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+.participant {
+  margin-bottom: 15px;
+}
+
+.participant input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-submission {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signaturelist {
+  margin-top: 30px;
+}
+
+.signaturelist h2 {
+  color: #c41e3a;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  text-indent: 0;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #b1b1b1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#alert {
+  margin: 10px 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
