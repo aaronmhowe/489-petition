@@ -41,6 +41,8 @@
     1. I've added a batch script `start.bat` at the root of the project directory `\petition`.
     2. The application can be launched by entering `start.bat` in your terminal.
         - Dependencies for NodeJS and ExpressJS should be installed automatically by executing this script, but in the event the script doesn't work, see the alternate instructions section below.
+    3. The React app is configured to run on port 3000, and the backend app is configured to run on port 4000.
+        - Once you run the batch script (assuming it works), you can copy-paste `http://localhost:4000` into your browser's URL to test the application.
 
 **Set-up and Execution (Linux/MacOS Users)**
 1. From Terminal, Clone the Application
@@ -56,6 +58,8 @@
     1. I've added a shell script `start.sh` at the root of the project directory `/petition`.
     2. The application can be launched by entering `./start.sh` in your terminal.
         - Dependencies for NodeJS and ExpressJS should be installed automatically by executing this script, but in the event the script doesn't work, see the alternate instructions section below.
+    3. The React app is configured to run on port 3000, and the backend app is configured to run on port 4000.
+        - Once you run the shell script (assuming it works), you can copy-paste `http://localhost:4000` into your browser's URL to test the application.
 ## Alternate Instructions for Set-up and Running (if the execution scripts fail)
 - It is essential to complete the pre-requisite sections if you have not already done so.
 
@@ -65,15 +69,14 @@
 2. Install Dependencies via Terminal
     1. With the `\app` folder as your working directory of the project `\petition`, run the following commands:
         - `npm install`
-        - `npm install -D nodemon`
-3. Execute the Application with Nodemon
-    1. Execute `npx nodemon ./bin/www`.
-        - Note: This command will not work unless `\app` is your working directory (`cd app` from `\petition`).
+    2. Do the same from the `\react-frontend` directory.
+3. Execute the Application with React
+    1. Execute `npm start`.
 
 **Linux/MacOS Users**
 1. Clone the Application
     - See main Set-up and Execution section.
 2. Install Dependencies
     - Same process as Windows but remember to use `/` instead `\` when navigating directories from the terminal.
-3. Execute the Application with Nodemon
+3. Execute the Application with React
     - Same process as Windows.
